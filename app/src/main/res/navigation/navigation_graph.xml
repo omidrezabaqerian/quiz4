@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/itemFragment">
+
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.omidrezabagherian.userapplication.ui.items.ItemFragment"
+        android:label="ItemFragment" >
+        <action
+            android:id="@+id/action_itemFragment_to_uploadImageFragment"
+            app:destination="@id/uploadImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadImageFragment"
+        android:name="com.omidrezabagherian.userapplication.ui.upload.UploadImageFragment"
+        android:label="UploadImageFragment" >
+        <argument
+            android:name="userID"
+            app:argType="string" />
+        <argument android:name="nationalCode"
+            app:argType="string" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/userCreateFragment"
+        android:name="com.omidrezabagherian.userapplication.ui.register.UserCreateFragment"
+        android:label="UserCreateFragment" />
+</navigation>
