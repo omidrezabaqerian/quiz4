@@ -2,11 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_graph.xml"
-    app:startDestination="@id/itemFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/itemFragment"
-        android:name="com.omidrezabagherian.userapplication.ui.items.ItemFragment"
+        android:id="@+id/homeFragment"
+        android:name="com.omidrezabagherian.userapplication.ui.items.HomeFragment"
         android:label="ItemFragment" >
         <action
             android:id="@+id/action_itemFragment_to_uploadImageFragment"
@@ -18,14 +18,6 @@
         android:label="UploadImageFragment" >
         <argument
             android:name="userID"
-            app:argType="string" />
-        <argument android:name="nationalCode"
-            app:argType="string" />
-        <argument
-            android:name="firstName"
-            app:argType="string" />
-        <argument
-            android:name="lastName"
             app:argType="string" />
     </fragment>
     <fragment

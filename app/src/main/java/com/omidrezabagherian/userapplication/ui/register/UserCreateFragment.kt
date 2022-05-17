@@ -38,7 +38,7 @@ class UserCreateFragment : Fragment(R.layout.fragment_user_create) {
 
             viewModel.user.observe(viewLifecycleOwner) {
                 Toast.makeText(context, "موفقیت آمیز بود", Toast.LENGTH_SHORT).show()
-                navController.navigate(R.id.itemFragment)
+                navController.navigate(R.id.homeFragment)
             }
 
         }

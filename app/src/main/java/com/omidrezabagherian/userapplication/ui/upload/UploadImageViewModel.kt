@@ -17,11 +17,26 @@ class UploadImageViewModel : ViewModel() {
     private val _imageThrowable = MediatorLiveData<String>()
     val imageThrowable: LiveData<String> = _imageThrowable
 
-    fun
-
     fun uploadImage(id: String, image: ByteArray) {
         val body = MultipartBody.create(MediaType.parse("image/*"), image)
         val request = MultipartBody.Part.createFormData("image", "image.jpg", body)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         NetworkManager.userService.uploadImageUser(id, request).enqueue(object : Callback<Any?> {
             override fun onResponse(call: Call<Any?>, response: Response<Any?>) {
                 _imageResponse.postValue(response.body().toString())
